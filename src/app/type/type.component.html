@@ -1,0 +1,60 @@
+<p></p>
+
+<div class="container col-md-5">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Type Appliances</div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Identifiant</th>
+          <th>Type Appliance</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let c of typesAppliance" >
+          <td>{{c.id}}</td>
+          <td>{{c.libelle}}</td>
+          <td><button class="btn btn-default" (click)="miseAjour(c)" >Edit</button></td>
+          <td *ngIf="c.id"><button class="btn btn-default" (click)="suppression(c.id)">Delete</button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+  <!--
+    <form (ngSubmit)="postType(f)" #f=ngForm *ngIf="!modal">
+      <div class="form-group">
+        <label >Type d'Appliance:</label>
+        <input type="text" class="form-control"  name="libelle" ngModel/>
+      </div>
+      <button type="submit" class="btn btn-default" >Submit</button>
+    </form>
+    <div *ngIf="modal">
+      <table class="table table-striped" *ngIf="typesApplianceid">
+        <thead>
+        <tr>
+          <th>Type Appliance</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr >
+          <td> <input class="form-control" [(ngModel)]="typesApplianceid.libelle"></td>
+        </tr>
+        </tbody>
+        <td><button class="btn btn-default" (click)="getid(typesApplianceid.id,typesApplianceid)" >Update</button></td>
+      </table>
+    </div>
+  </div>
+
+   -->
+
+
+
+
+
+
+
